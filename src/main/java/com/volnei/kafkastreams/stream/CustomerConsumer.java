@@ -13,9 +13,7 @@ public class CustomerConsumer {
 
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    // TODO validar com Andre necessidade de receber o nome do topico do Kafka somente parar log
     public <T> Consumer<KStream<String, T>> consume(KafkaTopicsEnum topic, Consumer<T> service) {
-
         return input -> input.foreach((key, value) -> {
             try {
                 service.accept(value); // executa o método contido no service

@@ -15,7 +15,6 @@ import static com.volnei.kafkastreams.enums.KafkaTopicsEnum.SAVE_PERSON;
 @Configuration
 public class KafkaConsumerConfig {
 
-    // TODO validar com Andre se é melhor usar o service ou o repository para persistir
     private final CustomerService customerService;
     private final CustomerConsumer customerConsumer;
 
